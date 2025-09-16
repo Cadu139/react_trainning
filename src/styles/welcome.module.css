@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--width-screen);
+    text-align: left;
+    background: radial-gradient(circle at top, var(--purple-transparent), white 70%);
+}
+
+mark {
+    background-color: var(--purple1);
+    color: white;
+    font-weight: lighter;
+    padding: 0 5px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 12pt;
+    margin: 20px 0;
+    line-height: 1.5;
+}

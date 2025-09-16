@@ -1,0 +1,26 @@
+
+:root {
+    --width-bar: 50px;
+    --width-screen: calc(100vw - var(--width-bar));
+    --width-bar-hover: 220px;
+    --z-bar: 2;
+    --z-body: 0;
+    --z-dim-screen: 1;
+    --purple-transparent: rgba(50, 0, 200, 0.4);
+    --purple-shock: rgb(150, 0, 255);
+    --purple-dark: rgb(30, 0, 80);
+    --purple1: rgb(50, 0, 200);
+    --purple2: rgb(57, 20, 100);
+    --yellow-transparent: rgba(200, 200, 0, 0.2);
+    --yellow: rgb(255, 255, 0);
+}
+
+body {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: var(--width-screen);
+    height: 100vh;
+    margin: 0 0 0 var(--width-bar);
+    font-family: "JetBrains Mono", Arial, monospace;
+}
