@@ -1,33 +1,46 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import s from '../styles/welcome.module.css'
 
 function CurrentTitle() {
-
-	const welcomes = [
-		'Criativity', 
-		'Inspiration',
-		'Imagination',
-		'Expression',
-		'StoryTree'
+	const [titleId, setTitleId] = useState(0);
+	const terms = [
+		"imagination",
+		"creativity",
+		"fantasy",
+		"knowledge",
+		"ideas",
+		"inspiration",
+		"StoryTree"
 	]
 
-	const [currentTitle, setCurrentTitle] = useState(0)
+	useEffect(() => {
+		const intervalTerm = setInterval(() => {
+			setTitleId((prevTitleId) => {
+				if (prevTitleId >= (terms.length - 1)) return 0
+				else return (prevTitleId + 1)
+			})
+		}, 3000);
 
-	setInterval(() => {
-		if (currentTitle >= welcomes.length - 1) setCurrentTitle(0)
-		else setCurrentTitle(currentTitle + 1)
-	}, 3000)
-	
-	return welcomes[currentTitle]
+		const intervalChar = setInterval(() => {
+			
+		}, terms[titleId].length) * 250; // Atualiza a cada 1 segundo
 
+		// Limpa o intervalo quando o componente for desmontado
+		return () => {
+			clearInterval(intervalTerm)
+			clearInterval(intervalChar)
+		};
+	}, []);
+
+	return "Unleash your " + terms[titleId]
 }
 
 function Welcome() {
 	return (
 		<main className={s.main}>
-			<h1 className={s.main}><CurrentTitle /></h1>
-			<p className={s.main}>
+			<h1 className={s.h1}><CurrentTitle /></h1>
+			<p className={s.p}>
 				Your journey through the imagination starts here.<br/>
 				Explore, read, write and connect with your creativity.
 			</p>
