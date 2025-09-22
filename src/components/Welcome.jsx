@@ -21,15 +21,9 @@ function CurrentTitle() {
 				else return (prevTitleId + 1)
 			})
 		}, 3000);
-
-		const intervalChar = setInterval(() => {
-			
-		}, terms[titleId].length) * 250; // Atualiza a cada 1 segundo
-
 		// Limpa o intervalo quando o componente for desmontado
 		return () => {
 			clearInterval(intervalTerm)
-			clearInterval(intervalChar)
 		};
 	}, []);
 
