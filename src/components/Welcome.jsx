@@ -27,13 +27,17 @@ function CurrentTitle() {
 		};
 	}, []);
 
-	return "Unleash your " + terms[titleId]
+	return (
+		<h1 className={s.h1}>
+			Unleash your <mark style={{width: "50%"}}>{terms[titleId]}</mark>
+		</h1>
+	)
 }
 
 function Welcome() {
 	return (
 		<main className={s.main}>
-			<h1 className={s.h1}><CurrentTitle /></h1>
+			<CurrentTitle />
 			<p className={s.p}>
 				Your journey through the imagination starts here.<br/>
 				Explore, read, write and connect with your creativity.
