@@ -26,9 +26,9 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0);
     transition: 0.25s;
 }

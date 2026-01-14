@@ -2,8 +2,12 @@
 import { useEffect, useState } from 'react'
 import s from '../styles/welcome.module.css'
 
+let aniDir = 1
+let aniTerm = null
+
 function CurrentTitle() {
-	const [titleId, setTitleId] = useState(0);
+	const [termId, setTermId] = useState(0)
+	const [termWidth, setTermWidth] = useState(0)
 	const terms = [
 		"imagination",
 		"creativity",
@@ -13,23 +17,33 @@ function CurrentTitle() {
 		"inspiration",
 		"StoryTree"
 	]
-
+	
 	useEffect(() => {
-		const intervalTerm = setInterval(() => {
-			setTitleId((prevTitleId) => {
-				if (prevTitleId >= (terms.length - 1)) return 0
-				else return (prevTitleId + 1)
-			})
-		}, 3000);
-		// Limpa o intervalo quando o componente for desmontado
+		aniTerm = setTimeout(() => {
+			setTimeout(() => {
+				setTermWidth(prevTermWidth => {
+					if (prevTermWidth == (terms[termId].length * (1 + aniDir)/2)) {
+						aniDir = aniDir * (-1)
+						if (aniDir == 1) setTermId(prevTermId => {
+							if (prevTermId == terms.length - 1) return 0
+							else return prevTermId + 1
+						})
+					}
+					return prevTermWidth + aniDir
+				})
+			}, (aniDir == 1) && (termWidth == terms[termId].length)? 1000: 0)
+		}, (aniDir == 1) ? 150 : 70)
+
 		return () => {
-			clearInterval(intervalTerm)
-		};
-	}, []);
+			clearTimeout(aniTerm)
+		}
+	}, [termWidth])
 
 	return (
 		<h1 className={s.h1}>
-			Unleash your <mark style={{width: "50%"}}>{terms[titleId]}</mark>
+			Unleash your <mark style={
+				{width: `${ termWidth }ch`}
+			}> {terms[termId]} </mark>
 		</h1>
 	)
 }

@@ -10,11 +10,13 @@ main {
 }
 
 mark {
+    display: inline-flex;
     background-color: var(--purple1);
     color: white;
     font-weight: lighter;
-    padding: 0 5px;
+    padding: 0 0ch;
     margin: 0;
+    overflow: hidden;
 }
 
 h1 {
