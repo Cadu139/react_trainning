@@ -6,16 +6,23 @@ function MenuList() {
 	return (
 		<ul className={s.ul}>
 			<li className={s.li}>
-				<CircleUserIcon className={s.icon}/>
-				<a href="/profile.html">My Account</a>
+				<a href="/profile.html">
+					<CircleUserIcon className={s.icon}/>
+					My Account
+				</a>
 			</li>
 			<li className={s.li}>
-				<LibraryIcon className={s.icon}/>
-				<a href="/explore.html">Discover</a>
+				<a href="/explore.html">
+					<LibraryIcon className={s.icon}/>
+					Discover
+				</a>
+				
 			</li>
 			<li className={s.li}>
-				<CircleQuestionMarkIcon className={s.icon}/>
-				<a href="/how-to-use.html">How to use?</a>
+				<a href="/how-to-use.html">
+					<CircleQuestionMarkIcon className={s.icon}/>
+					How to use?
+				</a>
 			</li>
 		</ul>
 	)
