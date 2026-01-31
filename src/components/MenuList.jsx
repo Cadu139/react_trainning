@@ -6,20 +6,20 @@ function MenuList() {
 	return (
 		<ul className={s.ul}>
 			<li className={s.li}>
-				<a href="/profile.html">
+				<a href="./profile.html">
 					<CircleUserIcon className={s.icon}/>
 					My Account
 				</a>
 			</li>
 			<li className={s.li}>
-				<a href="/explore.html">
+				<a href="./explore.html">
 					<LibraryIcon className={s.icon}/>
 					Discover
 				</a>
 				
 			</li>
 			<li className={s.li}>
-				<a href="/how-to-use.html">
+				<a href="./how-to-use.html">
 					<CircleQuestionMarkIcon className={s.icon}/>
 					How to use?
 				</a>
