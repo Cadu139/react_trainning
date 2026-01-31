@@ -10,13 +10,13 @@ function App() {
 	return (
 		<Router>
 			<div>
-				<Link to="/">Home</Link> | <Link to="/sobre">Sobre</Link>
+				{/*<Link to="/">Home</Link> | <Link to="/sobre">Sobre</Link>
 				<Routes>
 					<Route path="/" element={<div>Página Inicial</div>} />
 					<Route path="/sobre" element={<div>Página Sobre</div>} />
-				</Routes>
-				{/*<VerticalMenu />
-				<Welcome />*/}
+				</Routes>*/}
+				<VerticalMenu />
+				<Welcome />
 
 			</div>
 		</Router>
