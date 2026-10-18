@@ -20,6 +20,6 @@ body {
     justify-content: start;
     width: var(--width-screen);
     height: 100vh;
-    margin: 0 0 0 var(--width-bar);
+    margin: 0 0 0 15px;
     font-family: "JetBrains Mono", Arial, monospace;
 }

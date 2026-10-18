@@ -9,12 +9,11 @@ function CurrentTitle() {
 	const [termId, setTermId] = useState(0)
 	const [termWidth, setTermWidth] = useState(0)
 	const terms = [
-		"imagination",
-		"creativity",
-		"fantasy",
-		"knowledge",
-		"ideas",
-		"inspiration",
+		"imaginação",
+		"criatividade",
+		"fantasia",
+		"ideia",
+		"inspiração",
 		"StoryTree"
 	]
 	
@@ -41,7 +40,7 @@ function CurrentTitle() {
 
 	return (
 		<h1 className={s.h1}>
-			Unleash your <mark style={
+			Bem vindo à sua <mark style={
 				{width: `${ termWidth }ch`}
 			}> {terms[termId]} </mark>
 		</h1>
@@ -53,8 +52,8 @@ function Welcome() {
 		<main className={s.main}>
 			<CurrentTitle />
 			<p className={s.p}>
-				Your journey through the imagination starts here.<br/>
-				Explore, read, write and connect with your creativity.
+				Sua jornada através da imaginação começa aqui.<br/>
+				Explore, crie e compartilhe histórias com o mundo.
 			</p>
 		</main>
 	)
