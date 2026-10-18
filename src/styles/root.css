@@ -16,7 +16,6 @@
 }
 
 body {
-    display: flex;
     align-items: start;
     justify-content: start;
     width: var(--width-screen);
