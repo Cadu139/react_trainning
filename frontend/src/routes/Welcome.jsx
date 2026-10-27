@@ -4,18 +4,18 @@ import s from '../styles/welcome.module.css'
 
 let aniDir = 1
 let aniTerm = null
+const terms = [
+	"imaginação",
+	"criatividade",
+	"fantasia",
+	"ideia",
+	"inspiração",
+	"StoryTree"
+]
 
 function CurrentTitle() {
 	const [termId, setTermId] = useState(0)
 	const [termWidth, setTermWidth] = useState(0)
-	const terms = [
-		"imaginação",
-		"criatividade",
-		"fantasia",
-		"ideia",
-		"inspiração",
-		"StoryTree"
-	]
 	
 	useEffect(() => {
 		aniTerm = setTimeout(() => {
@@ -31,16 +31,16 @@ function CurrentTitle() {
 					return prevTermWidth + aniDir
 				})
 			}, (aniDir == 1) && (termWidth == terms[termId].length)? 1000: 0)
-		}, (aniDir == 1) ? 150 : 70)
+		}, (aniDir == 1) ? 120 : 60)
 
 		return () => {
 			clearTimeout(aniTerm)
 		}
-	}, [termWidth])
+	}, [termWidth, termId])
 
 	return (
 		<h1 className={s.h1}>
-			Bem vindo à sua <mark style={
+			Liberte a sua <mark style={
 				{width: `${ termWidth }ch`}
 			}> {terms[termId]} </mark>
 		</h1>

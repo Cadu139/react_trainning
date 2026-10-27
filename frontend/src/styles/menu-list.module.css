@@ -7,32 +7,26 @@
     padding: 0;
 }
 
-.li {
+.ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.li a {
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: row;
     width: 100%;
     text-align: left;
-    transition: 0.15s;
     cursor: pointer;
     color: white;
     background: no-repeat linear-gradient(to right, var(--yellow-transparent), transparent);
     background-size: 0% 100%;
-}
-
-.li a {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    text-align: left;
-    position: relative;
-    text-decoration: none;
     padding: 15px 0 15px 0px;
-    white-space: nowrap;
     color: white;
+    text-decoration: none;
+    transition: 0.15s; /*leaving transition*/
 }
 
 .icon {
@@ -40,12 +34,8 @@
     margin: 0 13px 0 13px;
 }
 
-.li:hover {
+.li:hover a{
     background-size: 100% 100%;
     color: var(--yellow);
-    transition: 0.5s;
-}
-
-.li:hover a{
-    color: var(--yellow);
+    transition: 0.5s; /*entering transition*/
 }

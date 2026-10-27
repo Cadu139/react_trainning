@@ -6,6 +6,8 @@ import s from '../styles/vertical-menu.module.css'
 
 function VerticalMenu() {
 
+	
+
 	return (
 		<div>
 			<nav className={s.nav}>

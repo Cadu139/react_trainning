@@ -1,28 +1,30 @@
 
+import { Link } from "react-router-dom"
+
 import { CircleQuestionMarkIcon, LibraryIcon, CircleUserIcon } from 'lucide-react'
 import s from '../styles/menu-list.module.css'
 
 function MenuList() {
 	return (
 		<ul className={s.ul}>
+			
 			<li className={s.li}>
-				<a href="./profile.html">
+				<Link to="/my_account">
 					<CircleUserIcon className={s.icon}/>
 					My Account
-				</a>
+				</Link>
 			</li>
 			<li className={s.li}>
-				<a href="./explore.html">
+				<Link to="/discover">
 					<LibraryIcon className={s.icon}/>
 					Discover
-				</a>
-				
+				</Link>
 			</li>
 			<li className={s.li}>
-				<a href="./how-to-use.html">
+				<Link to="/how_to_use">
 					<CircleQuestionMarkIcon className={s.icon}/>
 					How to use?
-				</a>
+				</Link>
 			</li>
 		</ul>
 	)
